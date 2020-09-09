@@ -3,13 +3,19 @@
 		<h1>ABOUT</h1>
 		<div>
 			<img v-bind:src="require('@/assets/farhan.jpg')" width="200">
+			<p>{{text}}</p>
 		</div>
 	</div>
 </template>
 
 <script>
 	export default {
-
+		name: 'aboutMe',
+		data: function(){
+			return{
+			text: 'lorem ipsum dolor sit amet'	
+			}
+		}
 	}
 </script>
 
