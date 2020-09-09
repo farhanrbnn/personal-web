@@ -10,7 +10,7 @@
       <b-container fluid>
         <b-row>
           <b-col>
-            <b-card bg-variant="dark" text-variant="white" title="Face Recognition with Head Pose Challenge">
+            <b-card bg-variant="light" text-variant="black" title="Face Recognition with Head Pose Challenge">
               <b-card-text>
                 With supporting text below as a natural lead-in to additional content.
               </b-card-text>
@@ -18,7 +18,7 @@
             </b-card>
           </b-col>
           <b-col>
-            <b-card bg-variant="dark" text-variant="white" title="greetings app">
+            <b-card bg-variant="light" text-variant="black" title="greetings app">
               <b-card-text>
                 With supporting text below as a natural lead-in to additional content.
               </b-card-text>
