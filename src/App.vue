@@ -2,18 +2,21 @@
   <div id="app">
     <navBar />
     <mainPage />
+    <aboutMe />
   </div>
 </template>
 
 <script>
 import navBar from './components/navBar.vue'
 import mainPage from './components/mainPage.vue'
+import aboutMe from './components/aboutMe.vue'
 
 export default {
   name: 'App',
   components: {
     navBar,
-    mainPage
+    mainPage,
+    aboutMe
   }
 }
 </script>
