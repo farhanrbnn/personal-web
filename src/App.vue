@@ -3,6 +3,7 @@
     <navBar />
     <mainPage />
     <aboutMe />
+    <footerPage />
   </div>
 </template>
 
@@ -10,13 +11,17 @@
 import navBar from './components/navBar.vue'
 import mainPage from './components/mainPage.vue'
 import aboutMe from './components/aboutMe.vue'
+import footerPage from './components/footerPage.vue'
+
 
 export default {
   name: 'App',
   components: {
     navBar,
     mainPage,
-    aboutMe
+    aboutMe,
+    footerPage
+
   }
 }
 </script>

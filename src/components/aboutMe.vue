@@ -12,19 +12,18 @@
           <b-col>
             <b-card bg-variant="light" text-variant="black" title="Face Recognition with Head Pose Challenge">
               <b-card-text>
-                With supporting text below as a natural lead-in to additional content.
+                this is for door lock access system using raspberry pi and face recognition for the "key"
               </b-card-text>
-                <b-button href="#" variant="primary">Go somewhere</b-button>
+                <b-button href="https://github.com/farhanrbnn/face-recognition-with-headpose-challenge" variant="primary">Repository</b-button>
             </b-card>
           </b-col>
           <b-col>
             <b-card bg-variant="light" text-variant="black" title="greetings app">
               <b-card-text>
-                With supporting text below as a natural lead-in to additional content.
+                inspired from momentum extension for google chrome
               </b-card-text>
-                <b-button href="#" variant="primary">Go somewhere</b-button>
-            </b-card>
-            
+                <b-button href="https://github.com/farhanrbnn/homepage-app" variant="primary">Repository</b-button>
+            </b-card>            
           </b-col>
         </b-row>
       </b-container>
@@ -38,7 +37,7 @@
     name: 'aboutMe',
     data: function(){
       return{
-      text: "Hello, my name is Farhan Rabbaanii. i'm computer engineering fresh graduate from BINUS University. I have intereset in full-stack web development, machine learning and computer vision" 
+      text: "Hello, my name is Farhan Rabbaanii. i'm computer engineering fresh graduate from BINUS University. I have intereset in full-stack web development, machine learning and computer vision. Below are some of the projects that i worked on" 
 
       }
     }
@@ -54,6 +53,7 @@
 
   img {
     margin-top: 30px;
+    margin-bottom: 20px;
     border-radius: 50%;
   }
 
@@ -61,5 +61,9 @@
     margin: 0 auto;
     width: 900px;
     margin-bottom: 20px;
+  }
+  .row {
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
 </style>
