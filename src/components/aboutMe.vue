@@ -1,6 +1,6 @@
 <template>
   <div id="aboutMe">
-    <h1>ABOUT</h1>
+    <h2>Hello</h2>
     <div>
       <img v-bind:src="require('@/assets/farhan.jpg')" width="200">
       <h3>{{text}}</h3>

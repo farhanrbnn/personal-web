@@ -1,7 +1,6 @@
 <template>
   <div id="app">
     <navBar />
-    <mainPage />
     <aboutMe />
     <footerPage />
   </div>
@@ -9,7 +8,6 @@
 
 <script>
 import navBar from './components/navBar.vue'
-import mainPage from './components/mainPage.vue'
 import aboutMe from './components/aboutMe.vue'
 import footerPage from './components/footerPage.vue'
 
@@ -18,7 +16,6 @@ export default {
   name: 'App',
   components: {
     navBar,
-    mainPage,
     aboutMe,
     footerPage
 
