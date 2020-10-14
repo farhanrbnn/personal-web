@@ -1,15 +1,18 @@
 <template>
  <div>
-  <b-nav align="center">
-    <b-nav-item><a href="">HOME</a></b-nav-item>
-    <b-nav-item><a href="#aboutMe">ABOUT</a></b-nav-item>
-  </b-nav>
+  <b-navbar align="center" type="dark" variant="dark">
+    <b-button v-b-toggle.sidebar-variant>V</b-button>
+    <b-sidebar id="sidebar-variant" bg-variant="dark" text-variant="light" shadow>
+      <p>adasdsa</p>
+    </b-sidebar>
+    <b-navbar-brand href="#">HOME</b-navbar-brand>
+  </b-navbar>
 </div>
 </template>
 
 <style scoped>
-	a {
-		color: black;
-		font-size: 20px;
-	}
+  a {
+    color: white;
+    font-size: 20px;
+  }
 </style>
