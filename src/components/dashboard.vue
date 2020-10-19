@@ -1,0 +1,72 @@
+<template>
+  <div id="navbar">
+    <div>
+      <b-navbar align="center" type="dark" variant="dark">
+        <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')">
+        <b-sidebar id="sidebar-variant" shadow>
+          <p>Dashboard</p>
+          <p>Project</p>
+          <p>Download Resume</p>
+        </b-sidebar>
+      </b-navbar>
+    </div>
+    <b-container id="dashboard" fluid="sm">
+      <h2>Greetings !</h2>
+      <img id="img-profile" v-bind:src="require('@/assets/farhan.jpg')" width="200">
+      <h3 id="info">{{text}}</h3>
+      <div id="contact">
+        <h3>Reach Me Out</h3>
+        <b-row id="contact" class="justify-content-md-center">
+            <b-col cols="2">
+              <a href="https://github.com/farhanrbnn">
+                <img v-bind:src="require('@/assets/github.png')">
+              </a>
+            </b-col>
+            <b-col cols="2">
+              <a href="mailto:farhanrbnn@gmail.com">
+                <img v-bind:src="require('@/assets/email.png')" width="64" height="64">
+              </a>
+            </b-col>
+          </b-row>
+        </div>
+        <div id="footer">
+          <p>Copyright Farhan &copy; 2020</p>
+        </div>
+    </b-container>
+  </div>
+</template>
+
+<script>
+  export default {
+    name: 'edit',
+    data () {
+      return {
+        text: "Hello, my name is Farhan Rabbaanii. i'm computer engineering fresh graduate from BINUS University. I have intereset in full-stack web development, machine learning and computer vision."
+      }
+    }
+  }
+</script>
+<style scoped>
+  a {
+    color: white;
+    font-size: 20px;
+  }
+
+  #img-profile {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+  }
+
+  #footer {
+    margin-top: 150px;
+  }
+
+  #dashboard {
+    margin-top: 100px;
+  }
+
+  #contact {
+    margin-top: 50px;
+  }
+</style>

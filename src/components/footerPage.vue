@@ -6,7 +6,7 @@
 
 <style scoped>
 	p {
-		margin-top: 200px
+		margin-top: 125px
 	}
 
 </style>

@@ -1,34 +1,25 @@
 <template>
   <div id="aboutMe">
-    <h2>Hello</h2>
-    <div>
+    <h2>Greetings</h2>
+    <b-container fluid="sm">
       <img v-bind:src="require('@/assets/farhan.jpg')" width="200">
-      <h3>{{text}}</h3>
-    </div>
-    <div>
-    <div>
-      <b-container fluid>
-        <b-row>
-          <b-col>
-            <b-card bg-variant="light" text-variant="black" title="Face Recognition with Head Pose Challenge">
-              <b-card-text>
-                this is for door lock access system using raspberry pi and face recognition for the "key"
-              </b-card-text>
-                <b-button href="https://github.com/farhanrbnn/face-recognition-with-headpose-challenge" variant="primary">Repository</b-button>
-            </b-card>
+      <h3 id="info">{{text}}</h3>
+      <div>
+        <h3>Reach Me Out</h3>
+        <b-row id="contact" class="justify-content-md-center">
+          <b-col cols="2">
+            <a href="https://github.com/farhanrbnn">
+              <img v-bind:src="require('@/assets/github.png')">
+            </a>
           </b-col>
-          <b-col>
-            <b-card bg-variant="light" text-variant="black" title="greetings app">
-              <b-card-text>
-                inspired from momentum extension for google chrome
-              </b-card-text>
-                <b-button href="https://github.com/farhanrbnn/homepage-app" variant="primary">Repository</b-button>
-            </b-card>            
+          <b-col cols="2">
+            <a href="mailto:farhanrbnn@gmail.com">
+              <img v-bind:src="require('@/assets/email.png')" width="64" height="64">
+            </a>
           </b-col>
         </b-row>
-      </b-container>
-  </div>
-    </div>
+      </div>
+    </b-container>
   </div>
 </template>
 
@@ -58,12 +49,23 @@
   }
 
   h3 {
-    margin: 0 auto;
-    width: 900px;
-    margin-bottom: 20px;
+    margin-top: 50px;
   }
+
   .row {
     margin-top: 50px;
     margin-bottom: 50px;
   }
+
+  #aboutMe {
+    margin-top: 50px;
+  }
+
+  #info{
+    margin: 0 auto;
+    /*width: 900px;*/
+    margin-bottom: 20px;
+  }
+
+
 </style>
