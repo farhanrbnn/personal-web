@@ -4,9 +4,11 @@
       <b-navbar align="center" type="dark" variant="dark">
         <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')">
         <b-sidebar id="sidebar-variant" shadow>
-          <p>Dashboard</p>
-          <p>Project</p>
-          <p>Download Resume</p>
+          <router-link to="/"><p id="route">Dashboard</p></router-link>
+          <router-link to="projects"><p id="route">Project</p></router-link>
+          <a href="https://drive.google.com/file/d/1zqIvnxwD_n24szplw19UNgwbYdqqF8mR/view?usp=sharing">
+            <p id="route">Download CV</p>
+          </a>
         </b-sidebar>
         <b-navbar-brand id="test" href="#">Projects</b-navbar-brand>
       </b-navbar>
@@ -55,7 +57,7 @@
         }
         ]
       }
-    } 
+    }
   }
 </script>
 <style scoped>
@@ -69,6 +71,15 @@
 
   #content {
     margin-top: 50px;
+  }
+
+  #route {
+    color: black;
+    
+  }
+
+  #sidebar-variant {
+    width: 180px;
   }
   
 </style>

@@ -4,15 +4,17 @@
       <b-navbar align="center" type="dark" variant="dark">
         <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')" width="32" height="32">
         <b-sidebar id="sidebar-variant" shadow>
-          <p>Dashboard</p>
-          <p>Project</p>
-          <p>Download Resume</p>
+          <router-link to="/"><p id="router">Dashboard</p></router-link>
+          <router-link to="projects"><p id="router">Projects</p></router-link>
+          <a href="https://drive.google.com/file/d/1zqIvnxwD_n24szplw19UNgwbYdqqF8mR/view?usp=sharing">
+            <p id="router">Download CV</p>
+          </a>
         </b-sidebar>
         <b-navbar-brand id="test" href="#">Dashboard</b-navbar-brand>
       </b-navbar>
     </div>
     <b-container id="dashboard" fluid="sm">
-      <h2>Greetings !</h2>
+      <h2>Welcome To My Page !</h2>
       <img id="img-profile" v-bind:src="require('@/assets/farhan.jpg')" width="200">
       <h3 id="info">{{text}}</h3>
       <div id="contact">
@@ -75,4 +77,10 @@
     margin-left: 20px;
     font-size: 25px;
   }
+
+  #router {
+    color: black;
+    font-size: 20px;
+  }
+
 </style>
