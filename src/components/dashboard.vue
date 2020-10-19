@@ -2,12 +2,13 @@
   <div id="navbar">
     <div>
       <b-navbar align="center" type="dark" variant="dark">
-        <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')">
+        <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')" width="32" height="32">
         <b-sidebar id="sidebar-variant" shadow>
           <p>Dashboard</p>
           <p>Project</p>
           <p>Download Resume</p>
         </b-sidebar>
+        <b-navbar-brand id="test" href="#">Dashboard</b-navbar-brand>
       </b-navbar>
     </div>
     <b-container id="dashboard" fluid="sm">
@@ -59,7 +60,7 @@
   }
 
   #footer {
-    margin-top: 150px;
+    margin-top: 140px;
   }
 
   #dashboard {
@@ -68,5 +69,10 @@
 
   #contact {
     margin-top: 50px;
+  }
+
+  #test {
+    margin-left: 20px;
+    font-size: 25px;
   }
 </style>
