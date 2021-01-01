@@ -1,13 +1,13 @@
 <template>
   <div id="project">
     <div>
-      <b-navbar align="center" type="dark" variant="dark">
-        <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')">
+     <b-navbar align="center" type="dark" variant="dark">
+        <img v-b-toggle.sidebar-variant v-bind:src="require('@/assets/hamburger.png')" width="32" height="32">
         <b-sidebar id="sidebar-variant" shadow>
-          <router-link to="/"><p id="route">Dashboard</p></router-link>
-          <router-link to="projects"><p id="route">Project</p></router-link>
-          <a href="https://drive.google.com/file/d/1zqIvnxwD_n24szplw19UNgwbYdqqF8mR/view?usp=sharing">
-            <p id="route">Download CV</p>
+          <router-link to="/"><p id="router">Dashboard</p></router-link>
+          <router-link to="projects"><p id="router">Projects</p></router-link>
+          <a href="https://drive.google.com/file/d/1zqIvnxwD_n24szplw19UNgwbYdqqF8mR/view">
+            <p id="router">Download CV</p>
           </a>
         </b-sidebar>
         <b-navbar-brand id="test" href="#">Projects</b-navbar-brand>
@@ -21,6 +21,7 @@
               <h5>{{list.title}}</h5>
               <p id="repo-detail">{{list.detail}}</p>
               <b-button :href="list.link">Repository</b-button>
+              <b-button class="mx-2" v-if="list.demo" :href="list.demo">Demo</b-button>
             </div>
           </b-card>
         </b-col>
@@ -54,6 +55,12 @@
           title: 'Liveness Detection',
           detail: 'method for prevent spoofing in face recognition',
           link: 'https://github.com/farhanrbnn/liveness-detection'
+        },
+        {
+          title: 'Covid-19 Monitor',
+          detail: 'application for monitoring Covid-19 cases in global and Indonesia',
+          link: 'https://github.com/farhanrbnn/covid19-monitor',
+          demo: 'https://covid19-data-monitor.web.app/'
         }
         ]
       }
@@ -73,9 +80,9 @@
     margin-top: 50px;
   }
 
-  #route {
+  #router {
     color: black;
-    
+    font-size: 20px;
   }
 
   #sidebar-variant {
