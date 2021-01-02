@@ -33,7 +33,7 @@
           </b-row>
         </div>
         <div id="footer">
-          <p>Copyright Farhan &copy; 2020</p>
+          <p>Copyright Farhan &copy; 2021</p>
         </div>
     </b-container>
   </div>

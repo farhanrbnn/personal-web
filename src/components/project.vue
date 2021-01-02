@@ -14,7 +14,7 @@
       </b-navbar>
     </div>
     <b-container id="content" fluid="sm">
-      <b-row class="d-flex justify-content-md-center">
+      <b-row class=" mb-5 d-flex justify-content-md-center">
         <b-col v-for="list in content" :key="list.title" sm="8" class="mt-3">
           <b-card>
             <div>
