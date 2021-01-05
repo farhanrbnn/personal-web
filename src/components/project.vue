@@ -6,9 +6,6 @@
         <b-sidebar id="sidebar-variant" shadow>
           <router-link to="/"><p id="router">Dashboard</p></router-link>
           <router-link to="projects"><p id="router">Projects</p></router-link>
-          <a href="https://drive.google.com/file/d/1zqIvnxwD_n24szplw19UNgwbYdqqF8mR/view">
-            <p id="router">Download CV</p>
-          </a>
         </b-sidebar>
         <b-navbar-brand id="test" href="#">Projects</b-navbar-brand>
       </b-navbar>
