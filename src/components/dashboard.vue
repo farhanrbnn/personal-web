@@ -2,46 +2,111 @@
   <div id="navbar">
     <div>
       <b-navbar toggleable="lg" type="light" id="navbar">
-         <b-navbar-brand href="#">Farhan Rabbaanii</b-navbar-brand>
-         <b-navbar-toggle target="nav-text-collapse"></b-navbar-toggle>
-         <b-collapse id="nav-text-collapse" is-nav>
-            <b-navbar-nav>
-              <b-nav-item href="#">Home</b-nav-item>
-              <b-nav-item href="#">About</b-nav-item>
-              <b-nav-item href="#">Portofolio</b-nav-item>
-            </b-navbar-nav>
-          </b-collapse>
+         <b-navbar-brand href="#"><strong>Farhan Rabbaanii</strong></b-navbar-brand>
+         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+         <b-collapse id="nav-collapse" is-nav>
+          <b-navbar-nav class="ml-auto">
+            <b-nav-item><p id="router">Home</p></b-nav-item>
+            <b-nav-item><p id="router">About</p></b-nav-item>
+            <b-nav-item><p id="router">Work</p></b-nav-item>
+          </b-navbar-nav>
+        </b-collapse>
       </b-navbar>
     </div>
-    <b-container fluid>
+    <b-container id="home">
       <b-row>
         <b-col class="d-flex align-items-center pr-0">
           <div>
-            <h1 id="greetings">Hello there, <br> my name is Farhan. I'm a Front-End Developer.</h1>
+            <h1 id="greetings">Hello there, <br> my name is Farhan. I'm a Software Engineer.</h1>
           </div>
         </b-col>
         <b-col class="d-flex justify-content-end">
-          <img id="img" v-bind:src="require('@/assets/farhan.png')" width="757" height="921">
+          <img id="img" v-bind:src="require('@/assets/farhan.png')">
         </b-col>
       </b-row>
     </b-container>
     <b-container id="about-me" fluid>
-      <h2>About Me</h2>
+      <h1><strong>About Me</strong></h1>
       <b-row class="about-row">
-        <b-col class="d-flex align-items-center">
-          <h2>Who am I in a brief.</h2>
+        <b-col class="d-flex align-items-center justify-content-center">
+          <h2 class="light-grey-text">Who am I in a brief.</h2>
         </b-col>
         <b-col>
-          <h2>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-            cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-            proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          <h2 style="text-align: justify;">
+            I am a Front-End Developer currently working at tech company. I have many interest such as full-stack web developing, machine learning and computer vision. I love to learn something new and always learning to enhance my skill in software development.
           </h2>
         </b-col>
       </b-row>
+      <b-row class="mt-5">
+        <b-col class="d-flex align-items-center justify-content-center">
+          <h2 class="light-grey-text">Technologies that i capable of.</h2>
+        </b-col>
+         <b-col>
+           <b-row>
+             <b-col>
+              <img id="tooltip-python" v-bind:src="require('@/assets/python.png')">
+             </b-col>
+             <b-tooltip target="tooltip-python" triggers="hover">
+                Python
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-js" v-bind:src="require('@/assets/javascript.png')">
+             </b-col>
+             <b-tooltip target="tooltip-js" triggers="hover">
+                JavaScript
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-mongodb" v-bind:src="require('@/assets/mongodb.png')">
+             </b-col>
+             <b-tooltip target="tooltip-mongodb" triggers="hover">
+                MongoDB
+              </b-tooltip>
+           </b-row>
+            <b-row class="mt-5">
+             <b-col>
+              <img id="tooltip-vue" v-bind:src="require('@/assets/vue.png')">
+             </b-col>
+             <b-tooltip target="tooltip-vue" triggers="hover">
+                VueJS
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-node" v-bind:src="require('@/assets/nodejs.png')">
+             </b-col>
+             <b-tooltip target="tooltip-node" triggers="hover">
+                NodeJS
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-sql" v-bind:src="require('@/assets/mysql.png')">
+             </b-col>
+             <b-tooltip target="tooltip-sql" triggers="hover">
+                MySQL
+              </b-tooltip>
+           </b-row>
+           <b-row class="mt-5">
+             <b-col>
+              <img id="tooltip-git" v-bind:src="require('@/assets/git.png')">
+             </b-col>
+             <b-tooltip target="tooltip-git" triggers="hover">
+                Git
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-linux" v-bind:src="require('@/assets/linux.png')">
+             </b-col>
+             <b-tooltip target="tooltip-linux" triggers="hover">
+                Linux
+              </b-tooltip>
+             <b-col>
+              <img id="tooltip-flask" v-bind:src="require('@/assets/flask.png')">
+             </b-col>
+             <b-tooltip target="tooltip-flask" triggers="hover">
+                Flask
+              </b-tooltip>
+           </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container id="portofolio" fluid>
+      <h1><strong>My Work</strong></h1>
     </b-container>
   </div>
 </template>
@@ -64,28 +129,46 @@
   .about-row {
     margin-top: 100px;
   }
+
+  .light-grey-text {
+    color: #8888;
+  }
+
   #about-me {
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 120px;
+    padding-left: 120px;
     margin-top: 103px;
   }
 
   #greetings {
     text-align: left;
     font-weight: bold;
-    font-size: 50px;
+    font-size: 40px;
+  }
+
+  #portofolio {
+    margin-top: 220px;
   }
 
   #navbar {
     background-color: white !important;
+    border-bottom: 1px solid #dadada;
   }
 
   #footer {
     margin-top: 140px;
   }
 
+  #home {
+    margin-top: 100px;
+  }
+
   #contact {
     margin-top: 50px;
+  }
+
+  #about-me {
+    margin-top: 220px;
   }
 
   #test {
@@ -94,7 +177,8 @@
   }
 
   #router {
-    color: black;
+    color: #999999;
+    margin-top: 10px;
     font-size: 20px;
   }
 
