@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import dashboard from '@/components/dashboard'
-import project from '@/components/project'
+import homePage from '@/pages/homePage'
+// import project from '@/components/project'
 
 Vue.use(Router)
 
@@ -10,13 +10,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'dashboard',
-      component: dashboard
-    },
-   {
-      path: '/projects',
-      name: 'projects',
-      component: project
+      name: 'homePage',
+      component: homePage
     }
   ]
 })

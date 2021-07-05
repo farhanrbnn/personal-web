@@ -1,18 +1,5 @@
 <template>
   <div id="navbar">
-    <div>
-      <b-navbar toggleable="lg" type="light" id="navbar">
-         <b-navbar-brand href="#"><strong>Farhan Rabbaanii</strong></b-navbar-brand>
-         <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
-         <b-collapse id="nav-collapse" is-nav>
-          <b-navbar-nav class="ml-auto">
-            <b-nav-item><p id="router" class="mb-0 mt-0">Home</p></b-nav-item>
-            <b-nav-item><a href="#test" id="router" class="mb-0 mt-0">About</a></b-nav-item>
-            <b-nav-item><p id="router" class="mb-0 mt-0">Work</p></b-nav-item>
-          </b-navbar-nav>
-        </b-collapse>
-      </b-navbar>
-    </div>
     <b-container id="home">
       <b-row>
         <b-col class="d-flex align-items-center pr-0">
@@ -25,7 +12,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <div id="test">
+    <div class="test">
     <b-container id="about-me" fluid>
       <h1><strong>About Me</strong></h1>
       <b-row class="about-row">
@@ -117,27 +104,6 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-container id="footer" class="mb-0" fluid>
-      <b-row class="pb-5 pt-5">
-        <b-col class="d-flex justify-content-start">
-          <h3 id="footer-text" class="pl-5">Farhan Rabbaanii</h3>
-        </b-col>
-        <b-col cols="4">
-          <b-row>
-            <b-col  class="d-flex justify-content-end">
-              <a href="https://github.com/farhanrbnn" target="_blank">
-                <img v-bind:src="require('@/assets/github.png')">
-              </a>
-            </b-col>
-            <b-col>
-              <a href="https://www.linkedin.com/in/farhan-rabbaanii-8b5383176/" target="_blank">
-                <img v-bind:src="require('@/assets/linkedin.png')">
-              </a>
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-    </b-container>
   </div>
 </template>
 
@@ -148,7 +114,16 @@
       return {
         text: "Hello, my name is Farhan Rabbaanii. i'm computer engineering fresh graduate from BINUS University. I have intereset in full-stack web development, machine learning and computer vision.",
       }
-    }
+    },
+    methods: {
+        scrollToDiv() {
+        const el = this.$el.getElementsByClassName('test');
+        
+        if (el) {
+          this.$refs.test.scrollIntoView()
+        }
+        }
+      }
   }
 </script>
 <style scoped>
@@ -170,10 +145,6 @@
     margin-top: 103px;
   }
 
-  #footer {
-    background-color: black;
-  }
-
   #greetings {
     text-align: left;
     font-weight: bold;
@@ -187,19 +158,6 @@
 
   #portofolio {
     margin-top: 220px;
-  }
-
-  #footer-text {
-    color: white;
-  }
-
-  #navbar {
-    background-color: white !important;
-    border-bottom: 1px solid #dadada;
-  }
-
-  #footer {
-    margin-top: 140px;
   }
 
   #home {
@@ -217,12 +175,6 @@
   #test {
     margin-left: 20px;
     font-size: 25px;
-  }
-
-  #router {
-    color: #999999;
-    margin-top: 10px;
-    font-size: 20px;
   }
 
 </style>
