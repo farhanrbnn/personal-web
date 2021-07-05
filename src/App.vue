@@ -21,12 +21,12 @@
           <b-row>
             <b-col  class="d-flex justify-content-end">
               <a href="https://github.com/farhanrbnn" target="_blank">
-                <img v-bind:src="require('@/assets/github.png')">
+                <img v-bind:src="require('@/assets/github.png')" alt="github icon">
               </a>
             </b-col>
             <b-col>
               <a href="https://www.linkedin.com/in/farhan-rabbaanii-8b5383176/" target="_blank">
-                <img v-bind:src="require('@/assets/linkedin.png')">
+                <img v-bind:src="require('@/assets/linkedin.png')" alt="linkedin icon">
               </a>
             </b-col>
           </b-row>

@@ -8,7 +8,7 @@
           </div>
         </b-col>
         <b-col class="d-flex justify-content-end">
-          <img id="img" v-bind:src="require('@/assets/farhan.png')">
+          <img id="img" alt="Farhan Rabbaanii" v-bind:src="require('@/assets/farhan.png')">
         </b-col>
       </b-row>
     </b-container>
@@ -32,7 +32,7 @@
          <b-col>
            <b-row  class="mt-5" v-for="(val, idx) in about" :key="idx">
              <b-col v-for="(el, index) in val.row" :key="index">
-              <img :id="el.id" v-bind:src="el.icon">
+              <img :id="el.id" :alt="el.alt" v-bind:src="el.icon">
                <b-tooltip :target="el.id" triggers="hover">
                 {{el.toolText}}
               </b-tooltip>
@@ -46,7 +46,7 @@
       <h1><strong>My Work</strong></h1>
       <b-row>
         <b-col>
-          <img v-bind:src="require('@/assets/nodata.svg')" class="mt-5" width="300" height="300">
+          <img v-bind:src="require('@/assets/nodata.svg')" alt="no data ilustration" class="mt-5" id="ilustration-img">
           <h3 class="mt-3">Will be update soon.</h3>
           <h3 class="mt-3">while wait, feel free to visit my <span><a href="https://github.com/farhanrbnn" target="_blank" id="github">GitHub </a></span>profile.</h3>
         </b-col>
@@ -67,17 +67,20 @@
               {
                 icon:require('@/assets/python.png'),
                 id: 'tooltip-python',
+                alt:"python icon",
                 toolText: 'Python'
 
               },
               {
                 icon:require('@/assets/javascript.png'),
                 id: 'tooltip-js',
+                alt:"JavaScript icon",
                 toolText: 'JavaScript'
               },
               {
                 icon:require('@/assets/mongodb.png'),
                 id: 'tooltip-mongodb',
+                alt:"mongodb icon",
                 toolText: 'MongoDB'
               }
             ]
@@ -87,16 +90,19 @@
               {
                 icon: require('@/assets/vue.png'),
                 id: 'tooltip-vue',
+                alt:"vuejs icon",
                 toolText: 'VueJS'
               },
               {
                 icon: require('@/assets/nodejs.png'),
                 id: 'tooltip-node',
+                alt:"nodejs icon",
                 toolText: 'NodeJS'
               },
               {
                 icon: require('@/assets/mysql.png'),
                 id: 'tooltip-sql',
+                alt:"mysql icon",
                 toolText: 'MySql'
               }
             ]
@@ -106,16 +112,19 @@
               {
                 icon: require('@/assets/git.png'),
                 id: 'tooltip-git',
+                alt:"git icon",
                 toolText: 'Git'
               },
               {
                 icon: require('@/assets/linux.png'),
                 id: 'tooltip-linux',
+                alt:"linux icon",
                 toolText: 'Linux'
               },
               {
                 icon: require('@/assets/flask.png'),
                 id: 'tooltip-flask',
+                alt:"flask icon",
                 toolText: 'Flask'
               }
             ]
@@ -174,6 +183,11 @@
   #test {
     margin-left: 20px;
     font-size: 25px;
+  }
+
+  #ilustration-img {
+    height: 300px;
+    width: 300px;
   }
 
 </style>
