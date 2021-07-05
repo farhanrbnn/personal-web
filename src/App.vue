@@ -5,9 +5,9 @@
          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item><p id="router" class="mb-0 mt-0">Home</p></b-nav-item>
+            <!-- <b-nav-item><p id="router" class="mb-0 mt-0">Home</p></b-nav-item>
             <b-nav-item><a href="#test" v-on:click="scrollToDiv()" id="router" class="mb-0 mt-0">About</a></b-nav-item>
-            <b-nav-item><p id="router" class="mb-0 mt-0">Work</p></b-nav-item>
+            <b-nav-item><p id="router" class="mb-0 mt-0">Work</p></b-nav-item> -->
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>

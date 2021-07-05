@@ -21,74 +21,22 @@
         </b-col>
         <b-col>
           <h2 style="text-align: justify;">
-            I am a Front-End Developer currently working at tech company. I have many interest such as full-stack web developing, machine learning and computer vision. I love to learn something new and always learning to enhance my skill in software development.
+            I am currently working at tech company as a Front-End Developer. I have many interest such as full-stack web developing, machine learning and computer vision. I love to learn something new and always learning to enhance my skill in software development.
           </h2>
         </b-col>
       </b-row>
       <b-row class="mt-5">
         <b-col class="d-flex align-items-center justify-content-center">
-          <h2 class="light-grey-text">Technologies that i capable of.</h2>
+          <h2 class="light-grey-text">Technologies that i use.</h2>
         </b-col>
          <b-col>
-           <b-row>
-             <b-col>
-              <img id="tooltip-python" v-bind:src="require('@/assets/python.png')">
-             </b-col>
-             <b-tooltip target="tooltip-python" triggers="hover">
-                Python
+           <b-row  class="mt-5" v-for="(val, idx) in about" :key="idx">
+             <b-col v-for="(el, index) in val.row" :key="index">
+              <img :id="el.id" v-bind:src="el.icon">
+               <b-tooltip :target="el.id" triggers="hover">
+                {{el.toolText}}
               </b-tooltip>
-             <b-col>
-              <img id="tooltip-js" v-bind:src="require('@/assets/javascript.png')">
              </b-col>
-             <b-tooltip target="tooltip-js" triggers="hover">
-                JavaScript
-              </b-tooltip>
-             <b-col>
-              <img id="tooltip-mongodb" v-bind:src="require('@/assets/mongodb.png')">
-             </b-col>
-             <b-tooltip target="tooltip-mongodb" triggers="hover">
-                MongoDB
-              </b-tooltip>
-           </b-row>
-            <b-row class="mt-5">
-             <b-col>
-              <img id="tooltip-vue" v-bind:src="require('@/assets/vue.png')">
-             </b-col>
-             <b-tooltip target="tooltip-vue" triggers="hover">
-                VueJS
-              </b-tooltip>
-             <b-col>
-              <img id="tooltip-node" v-bind:src="require('@/assets/nodejs.png')">
-             </b-col>
-             <b-tooltip target="tooltip-node" triggers="hover">
-                NodeJS
-              </b-tooltip>
-             <b-col>
-              <img id="tooltip-sql" v-bind:src="require('@/assets/mysql.png')">
-             </b-col>
-             <b-tooltip target="tooltip-sql" triggers="hover">
-                MySQL
-              </b-tooltip>
-           </b-row>
-           <b-row class="mt-5">
-             <b-col>
-              <img id="tooltip-git" v-bind:src="require('@/assets/git.png')">
-             </b-col>
-             <b-tooltip target="tooltip-git" triggers="hover">
-                Git
-              </b-tooltip>
-             <b-col>
-              <img id="tooltip-linux" v-bind:src="require('@/assets/linux.png')">
-             </b-col>
-             <b-tooltip target="tooltip-linux" triggers="hover">
-                Linux
-              </b-tooltip>
-             <b-col>
-              <img id="tooltip-flask" v-bind:src="require('@/assets/flask.png')">
-             </b-col>
-             <b-tooltip target="tooltip-flask" triggers="hover">
-                Flask
-              </b-tooltip>
            </b-row>
         </b-col>
       </b-row>
@@ -113,17 +61,68 @@
     data () {
       return {
         text: "Hello, my name is Farhan Rabbaanii. i'm computer engineering fresh graduate from BINUS University. I have intereset in full-stack web development, machine learning and computer vision.",
+        about:[
+          {
+            row:[
+              {
+                icon:require('@/assets/python.png'),
+                id: 'tooltip-python',
+                toolText: 'Python'
+
+              },
+              {
+                icon:require('@/assets/javascript.png'),
+                id: 'tooltip-js',
+                toolText: 'JavaScript'
+              },
+              {
+                icon:require('@/assets/mongodb.png'),
+                id: 'tooltip-mongodb',
+                toolText: 'MongoDB'
+              }
+            ]
+          },
+          {
+            row: [
+              {
+                icon: require('@/assets/vue.png'),
+                id: 'tooltip-vue',
+                toolText: 'VueJS'
+              },
+              {
+                icon: require('@/assets/nodejs.png'),
+                id: 'tooltip-node',
+                toolText: 'NodeJS'
+              },
+              {
+                icon: require('@/assets/mysql.png'),
+                id: 'tooltip-sql',
+                toolText: 'MySql'
+              }
+            ]
+          },
+          {
+            row: [
+              {
+                icon: require('@/assets/git.png'),
+                id: 'tooltip-git',
+                toolText: 'Git'
+              },
+              {
+                icon: require('@/assets/linux.png'),
+                id: 'tooltip-linux',
+                toolText: 'Linux'
+              },
+              {
+                icon: require('@/assets/flask.png'),
+                id: 'tooltip-flask',
+                toolText: 'Flask'
+              }
+            ]
+          }
+        ]
       }
-    },
-    methods: {
-        scrollToDiv() {
-        const el = this.$el.getElementsByClassName('test');
-        
-        if (el) {
-          this.$refs.test.scrollIntoView()
-        }
-        }
-      }
+    }
   }
 </script>
 <style scoped>
