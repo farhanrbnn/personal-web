@@ -6,9 +6,9 @@
          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
-            <b-nav-item><p id="router">Home</p></b-nav-item>
-            <b-nav-item><p id="router">About</p></b-nav-item>
-            <b-nav-item><p id="router">Work</p></b-nav-item>
+            <b-nav-item><p id="router" class="mb-0 mt-0">Home</p></b-nav-item>
+            <b-nav-item><a href="#test" id="router" class="mb-0 mt-0">About</a></b-nav-item>
+            <b-nav-item><p id="router" class="mb-0 mt-0">Work</p></b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-navbar>
@@ -25,6 +25,7 @@
         </b-col>
       </b-row>
     </b-container>
+    <div id="test">
     <b-container id="about-me" fluid>
       <h1><strong>About Me</strong></h1>
       <b-row class="about-row">
@@ -105,8 +106,37 @@
         </b-col>
       </b-row>
     </b-container>
+    </div>
     <b-container id="portofolio" fluid>
       <h1><strong>My Work</strong></h1>
+      <b-row>
+        <b-col>
+          <img v-bind:src="require('@/assets/nodata.svg')" class="mt-5" width="300" height="300">
+          <h3 class="mt-3">Will be update soon.</h3>
+          <h3 class="mt-3">while wait, feel free to visit my <span><a href="https://github.com/farhanrbnn" target="_blank" id="github">GitHub </a></span>profile.</h3>
+        </b-col>
+      </b-row>
+    </b-container>
+    <b-container id="footer" class="mb-0" fluid>
+      <b-row class="pb-5 pt-5">
+        <b-col class="d-flex justify-content-start">
+          <h3 id="footer-text" class="pl-5">Farhan Rabbaanii</h3>
+        </b-col>
+        <b-col cols="4">
+          <b-row>
+            <b-col  class="d-flex justify-content-end">
+              <a href="https://github.com/farhanrbnn" target="_blank">
+                <img v-bind:src="require('@/assets/github.png')">
+              </a>
+            </b-col>
+            <b-col>
+              <a href="https://www.linkedin.com/in/farhan-rabbaanii-8b5383176/" target="_blank">
+                <img v-bind:src="require('@/assets/linkedin.png')">
+              </a>
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -140,14 +170,27 @@
     margin-top: 103px;
   }
 
+  #footer {
+    background-color: black;
+  }
+
   #greetings {
     text-align: left;
     font-weight: bold;
     font-size: 40px;
   }
 
+  #github {
+    color: #2c3e50;
+    font-size: 1.75rem;
+  }
+
   #portofolio {
     margin-top: 220px;
+  }
+
+  #footer-text {
+    color: white;
   }
 
   #navbar {
@@ -168,7 +211,7 @@
   }
 
   #about-me {
-    margin-top: 220px;
+    margin-top: 235px;
   }
 
   #test {
