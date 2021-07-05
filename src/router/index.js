@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import homePage from '@/pages/homePage'
-// import project from '@/components/project'
+import notFound from '@/components/notFound'
 
 Vue.use(Router)
 
@@ -12,6 +12,11 @@ export default new Router({
       path: '/',
       name: 'homePage',
       component: homePage
+    },
+    {
+      path:'*',
+      name:'notFound',
+      component: notFound 
     }
   ]
 })
