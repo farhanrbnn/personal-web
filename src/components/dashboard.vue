@@ -42,13 +42,17 @@
       </b-row>
     </b-container>
     </div>
-    <b-container id="portofolio" fluid>
+    <b-container class="mb-5" id="portofolio" fluid>
       <h1><strong>My Work</strong></h1>
-      <b-row>
-        <b-col>
-          <img v-bind:src="require('@/assets/nodata.svg')" alt="no data ilustration" class="mt-5" id="ilustration-img">
-          <h3 class="mt-3">Will be update soon.</h3>
-          <h3 class="mt-3">while wait, feel free to visit my <span><a href="https://github.com/farhanrbnn" target="_blank" id="github">GitHub </a></span>profile.</h3>
+      <b-row v-for="(val, idx) in works" :key="idx" class="d-flex justify-content-center mt-5">
+        <b-col cols="6" class="img-container">
+          <a href="">
+            <img fluid v-bind:src="val.image" id="portofolio-img">
+            <div class="overlay">
+              <div class="text">More</div>
+            </div>
+          </a>
+          <h4 class="mt-3">{{val.title}}</h4>
         </b-col>
       </b-row>
     </b-container>
@@ -129,12 +133,53 @@
               }
             ]
           }
-        ]
+        ],
+        works:[
+          {
+            image: require('@/assets/covid-monitor.png'),
+            title: 'Web / Covid 19 Case Monitor'
+          },
+          {
+            image: require('@/assets/ecommerce.png'),
+            title: 'Web App / E-Commerce'
+          },
+          {
+            image: require('@/assets/facerec.png'),
+            title: 'Web App / Door Access with Face Recognition'
+          }
+          ]
       }
     }
   }
 </script>
 <style scoped>
+.img-container {
+  position: relative;
+}
+
+.img-container:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  background-color: #dadada;
+  color: black;
+  font-size: 16px;
+  padding: 16px 32px;
+  border: 1px solid #dadada;
+  border-radius: 10px;
+}
+
+.overlay {
+ transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+}
   a {
     color: white;
     font-size: 20px;
@@ -165,7 +210,7 @@
   }
 
   #portofolio {
-    margin-top: 220px;
+    margin-top: 220px; 
   }
 
   #home {
