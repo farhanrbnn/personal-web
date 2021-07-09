@@ -14,20 +14,20 @@
     </b-container>
     <div class="test">
     <b-container id="about-me" fluid>
-      <h1><strong>About Me</strong></h1>
+      <h2><strong>About Me</strong></h2>
       <b-row class="about-row">
         <b-col class="d-flex align-items-center justify-content-center">
-          <h2 class="light-grey-text">Who am I in a brief.</h2>
+          <h3 class="light-grey-text">Who am I in a brief.</h3>
         </b-col>
         <b-col>
-          <h2 style="text-align: justify;">
+          <p style="text-align: justify;">
             I am currently working at tech company as a Front-End Developer. I have many interest such as full-stack web developing, machine learning and computer vision. I love to learn something new and always learning to enhance my skill in software development.
-          </h2>
+          </p>
         </b-col>
       </b-row>
       <b-row class="mt-5">
         <b-col class="d-flex align-items-center justify-content-center">
-          <h2 class="light-grey-text">Technologies that i use.</h2>
+          <h3 class="light-grey-text">Technologies that i use.</h3>
         </b-col>
          <b-col>
            <b-row  class="mt-5" v-for="(val, idx) in about" :key="idx">
@@ -43,15 +43,15 @@
     </b-container>
     </div>
     <b-container class="mb-5" id="portofolio" fluid>
-      <h1><strong>My Work</strong></h1>
+      <h2><strong>My Work</strong></h2>
       <b-row v-for="(val, idx) in works" :key="idx" class="d-flex justify-content-center mt-5">
         <b-col cols="6" class="img-container">
-          <a href="">
+          <router-link :to="val.link">
             <img fluid v-bind:src="val.image" id="portofolio-img">
             <div class="overlay">
               <div class="text">More</div>
             </div>
-          </a>
+          </router-link>
           <h4 class="mt-3">{{val.title}}</h4>
         </b-col>
       </b-row>
@@ -69,22 +69,22 @@
           {
             row:[
               {
-                icon:require('@/assets/python.png'),
+                icon: require('@/assets/python.png'),
                 id: 'tooltip-python',
-                alt:"python icon",
+                alt: "python icon",
                 toolText: 'Python'
 
               },
               {
                 icon:require('@/assets/javascript.png'),
                 id: 'tooltip-js',
-                alt:"JavaScript icon",
+                alt: "JavaScript icon",
                 toolText: 'JavaScript'
               },
               {
                 icon:require('@/assets/mongodb.png'),
                 id: 'tooltip-mongodb',
-                alt:"mongodb icon",
+                alt: "mongodb icon",
                 toolText: 'MongoDB'
               }
             ]
@@ -106,7 +106,7 @@
               {
                 icon: require('@/assets/mysql.png'),
                 id: 'tooltip-sql',
-                alt:"mysql icon",
+                alt: "mysql icon",
                 toolText: 'MySql'
               }
             ]
@@ -137,15 +137,18 @@
         works:[
           {
             image: require('@/assets/covid-monitor.png'),
-            title: 'Web / Covid 19 Case Monitor'
+            title: 'Web / Covid 19 Case Monitor',
+            link: '/covid19monitor'
           },
           {
             image: require('@/assets/ecommerce.png'),
-            title: 'Web App / E-Commerce'
+            title: 'Web App / E-Commerce',
+            link: '/ecommerce'
           },
           {
             image: require('@/assets/facerec.png'),
-            title: 'Web App / Door Access with Face Recognition'
+            title: 'Web App / Door Access with Face Recognition',
+            link: '/facerec'
           }
           ]
       }
@@ -153,6 +156,10 @@
   }
 </script>
 <style scoped>
+p {
+  font-size: 20px;
+  max-width: 700px;
+}
 .img-container {
   position: relative;
 }
@@ -195,7 +202,7 @@
   #about-me {
     padding-right: 120px;
     padding-left: 120px;
-    margin-top: 103px;
+    margin-top: 200px;
   }
 
   #greetings {

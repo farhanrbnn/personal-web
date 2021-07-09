@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <b-navbar toggleable="lg" type="light" id="navbar">
-         <b-navbar-brand href="#"><strong>Farhan Rabbaanii</strong></b-navbar-brand>
+         <b-navbar-brand href="#"><strong><router-link class="router" to="/">Farhan Rabbaanii</router-link></strong></b-navbar-brand>
          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
          <b-collapse id="nav-collapse" is-nav>
           <b-navbar-nav class="ml-auto">
@@ -56,10 +56,13 @@ export default {
     border-bottom: 1px solid #dadada;
   }
 
-#router {
-    color: #999999;
-    margin-top: 10px;
-    font-size: 20px;
+.router {
+    color: black;
+  }
+
+  .router:hover {
+    color: black;
+    text-decoration: none;
   }
 
 #footer {
