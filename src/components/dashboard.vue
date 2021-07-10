@@ -46,12 +46,12 @@
       <h2><strong>My Work</strong></h2>
       <b-row v-for="(val, idx) in works" :key="idx" class="d-flex justify-content-center mt-5">
         <b-col cols="6" class="img-container">
-          <router-link :to="val.link">
+          <a :href="val.link" id="test">
             <img fluid v-bind:src="val.image" id="portofolio-img">
             <div class="overlay">
               <div class="text">More</div>
             </div>
-          </router-link>
+          </a>
           <h4 class="mt-3">{{val.title}}</h4>
         </b-col>
       </b-row>
@@ -178,7 +178,7 @@ p {
 }
 
 .overlay {
- transition: .5s ease;
+  transition: .5s ease;
   opacity: 0;
   position: absolute;
   top: 50%;

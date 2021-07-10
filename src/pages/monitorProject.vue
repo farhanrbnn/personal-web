@@ -12,7 +12,7 @@
         <b-col>
           <b-carousel
           id="carousel-1"
-          :interval="3000"
+          :interval="2500"
           controls
           indicators
           background="#dadada"
@@ -31,7 +31,7 @@
       <b-row>
         <b-col>
           <h3>Description</h3>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, aperiam deserunt? Sunt quis ipsa rerum eligendi nulla laudantium et, quia dolor! Eaque, perspiciatis quo. Quia dicta exercitationem nobis aperiam beatae.</p>
+          <p>{{description}}</p>
         </b-col>
       </b-row>
       <b-row class="mt-4">
@@ -62,6 +62,7 @@ export default {
 	name: 'monitorProject',
   data () {
     return {
+      description:'this project is about monitoring covid 19 cases in indonesia. This website just consuming API and show the data. It show cases from all province in Indonesia. This API got the data from he Center for Systems Science and Engineering John Hopkins University and data.covid19.go.id',
       tech: [
         {
           img: require('@/assets/vue.png'),

@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="light" id="navbar">
+    <b-navbar sticky toggleable="lg" type="light" id="navbar">
          <b-navbar-brand href="#"><strong><router-link class="router" to="/">Farhan Rabbaanii</router-link></strong></b-navbar-brand>
          <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
          <b-collapse id="nav-collapse" is-nav>
@@ -32,6 +32,11 @@
           </b-row>
         </b-col>
       </b-row>
+      <b-row>
+        <b-col>
+          <p class="copyright">© 2021 by Farhan Rabbaanii. All Rights Reserved</p>
+        </b-col>
+      </b-row>
     </b-container>
   </div>
 </template>
@@ -51,6 +56,11 @@ export default {
   color: #2c3e50;
 }
 
+::selection {
+  color: white;
+  background: black;
+}
+
  #navbar {
     background-color: white !important;
     border-bottom: 1px solid #dadada;
@@ -58,6 +68,10 @@ export default {
 
 .router {
     color: black;
+  }
+
+  .copyright {
+    color: white;
   }
 
   .router:hover {
